@@ -100,7 +100,7 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-         maxZoom: 28, minZoom: 1, projection: new ol.proj.Projection({
+         maxZoom: 26, minZoom: 3, projection: new ol.proj.Projection({
             code: 'EPSG:4326',
             extent: [-20037508.342789, -20037508.342789, 20037508.342789, 20037508.342789],
             units: 'degrees'})
@@ -113,7 +113,20 @@ layerSwitcher.hidePanel = function() {};
 layerSwitcher.showPanel();
 
 
-map.getView().fit([-91.245629, 11.817127, -86.097531, 15.682549], map.getSize());
+    var searchLayer = new SearchLayer({
+      layer: lyr_Enfermedadespormunicipiopoligonos_5,
+      colName: 'NOMBRE',
+      zoom: 10,
+      collapsed: true,
+      map: map
+    });
+
+    map.addControl(searchLayer);
+    document.getElementsByClassName('search-layer')[0]
+    .getElementsByTagName('button')[0].className +=
+    ' fa fa-binoculars';
+    
+map.getView().fit([-90.185650, 12.841989, -87.611601, 14.774700], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
@@ -153,7 +166,7 @@ var featureOverlay = new ol.layer.Vector({
     updateWhileInteracting: true // optional, for instant visual feedback
 });
 
-var doHighlight = true;
+var doHighlight = false;
 var doHover = false;
 
 var highlight;
@@ -696,7 +709,7 @@ map.on("rendercomplete", function(evt) {
         var attributionList = attribution.getElementsByTagName('ul')[0];
         var firstLayerAttribution = attributionList.getElementsByTagName('li')[0];
         var qgis2webAttribution = document.createElement('li');
-        qgis2webAttribution.innerHTML = '<a href="https://github.com/Carl0sss">Dev.</a> &middot; ';
+        qgis2webAttribution.innerHTML = '<a href="https://github.com/Carl0sss">Dev</a> &middot; ';
         var olAttribution = document.createElement('li');
         olAttribution.innerHTML = '<a href="https://openlayers.org/">OpenLayers</a> &middot; ';
         attributionList.insertBefore(qgis2webAttribution, firstLayerAttribution);

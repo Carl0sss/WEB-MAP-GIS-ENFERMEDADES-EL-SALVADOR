@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-ol.proj.get("EPSG:4326").setExtent([-91.245629, 11.817127, -86.097531, 15.682549]);
+ol.proj.get("EPSG:4326").setExtent([-90.185650, 12.841989, -87.611601, 14.774700]);
 var wms_layers = [];
 
 
@@ -187,7 +187,7 @@ var layersList = [lyr_OpenStreetMap_0,lyr_Heatmap_enfermedades_1,lyr_Shapefile_E
 lyr_Shapefile_El_Salvador_2.set('fieldAliases', {'FID': 'FID', 'PAIS_': 'PAIS_', 'Shape__Area': 'Shape__Area', 'Shape__Length': 'Shape__Length', });
 lyr_DepartamentosElSalvador_3.set('fieldAliases', {'AREA': 'AREA', 'PERIMETER': 'PERIMETER', 'DEPTO': 'DEPTO', 'ID_DEPTO': 'ID_DEPTO', 'ZONA': 'ZONA', });
 lyr_MunicipiosElSalvador_4.set('fieldAliases', {'COD_MUN4': 'COD_MUN4', 'NOMBRE': 'NOMBRE', 'POBLACION': 'POBLACION', 'POBREZA': 'POBREZA', });
-lyr_Enfermedadespormunicipiopoligonos_5.set('fieldAliases', {'COD_MUN4': 'COD_MUN4', 'NOMBRE': 'Nombre', 'POBLACION': 'Población', 'POBREZA': 'Indice de pobresa', '.CASOS_DIARREA': 'Casos diarrea', '.CASOS_DENGUE': 'Casos dengue', '.CASOS_ZIKA_CHIKUNGUNYA': 'Casos Zyka-Chikungunya', '.CASOS_NEUMONIA': 'Casos neumonia', '.CASOS_ENF_ARREICA_AGU': 'Casos enfermedad arreica aguda', '.CASOS_INFEC_RESP_AGU': 'Casos infección respiratoria aguda', });
+lyr_Enfermedadespormunicipiopoligonos_5.set('fieldAliases', {'COD_MUN4': 'COD_MUN4', 'NOMBRE': 'NOMBRE', 'POBLACION': 'POBLACION', 'POBREZA': 'POBREZA', '.CASOS_DIARREA': '.CASOS_DIARREA', '.CASOS_DENGUE': '.CASOS_DENGUE', '.CASOS_ZIKA_CHIKUNGUNYA': '.CASOS_ZIKA_CHIKUNGUNYA', '.CASOS_NEUMONIA': '.CASOS_NEUMONIA', '.CASOS_ENF_ARREICA_AGU': '.CASOS_ENF_ARREICA_AGU', '.CASOS_INFEC_RESP_AGU': '.CASOS_INFEC_RESP_AGU', });
 lyr_Enfermedades_por_municipio_6.set('fieldAliases', {'CODMUNI': 'CODMUNI', 'CODEPTO': 'CODEPTO', 'MUNICIPIO': 'MUNICIPIO', 'TITULO': 'TITULO', 'DISTRITO': 'DISTRITO', 'POBLACION': 'POBLACION', 'CASOS_DIARREA': 'CASOS_DIARREA', 'CASOS_DENGUE': 'CASOS_DENGUE', 'CASOS_ZIKA_CHIKUNGUNYA': 'CASOS_ZIKA_CHIKUNGUNYA', 'CASOS_NEUMONIA': 'CASOS_NEUMONIA', 'CASOS_ENF_ARREICA_AGU': 'CASOS_ENF_ARREICA_AGU', 'CASOS_INFEC_RESP_AGU': 'CASOS_INFEC_RESP_AGU', 'xcoord': 'xcoord', 'ycoord': 'ycoord', });
 lyr_Casos_dengue_por_municipio_7.set('fieldAliases', {'CODMUNI': 'CODMUNI', 'MUNICIPIO': 'MUNICIPIO', 'DEPARTAMENTO': 'DEPARTAMENTO', 'CASOS_DENGUE': 'CASOS_DENGUE', 'X': 'X', 'Y': 'Y', });
 lyr_Casos_diarrea_por_municipio_8.set('fieldAliases', {'CODMUNI': 'CODMUNI', 'MUNICIPIO': 'MUNICIPIO', 'DEPARTAMENTO': 'DEPARTAMENTO', 'CASO_DIARREA': 'CASO_DIARREA', 'X': 'X', 'Y': 'Y', });
